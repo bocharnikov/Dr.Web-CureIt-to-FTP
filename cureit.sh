@@ -7,8 +7,8 @@
 #Source: https://github.com/bocharnikov                                                 |
 #                                                                                       |
 #Files: cureit.sh                                                                       |
-#Build: 140618                                                                          |
-#Copyright: 2018 Bocharnikov Sergei                                                     |
+#Build: 060319                                                                          |
+#Copyright: 2019 Bocharnikov Sergei                                                     |
 #--------------------------------[ License: MIT ]---------------------------------------+
 #                                                                                       |
 #---------------------------------------------------------------------------------------+
@@ -40,7 +40,8 @@ ftp -n -v -i $HOST << EOT
 ascii
 user $USER $PASSWD
 prompt
-mdelete *.exe
+delete Dr.Web_CureIt!_old.exe
+rename Dr.Web_CureIt!.exe Dr.Web_CureIt!_old.exe
 binary
 put Dr.Web_CureIt!.exe
 bye
